@@ -23,6 +23,23 @@ artists = [
         :category => 'Back in Stock',
         :release_date => '2015-05-02 14:32:53',
         :img => 'http://cdn.discogs.com/NoEeqtpatZvo_8a6Td_whK0P9iA=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(96)/discogs-images/R-6907841-1429395410-5069.jpeg.jpg',
+        :tracks => [
+          {
+            :name => 'A - Ribtickler',
+            :duration => '5:35',
+            :url => 'http://www.juno.co.uk/MP3/SF571665-01-01-01.mp3'
+          },
+          {
+            :name => 'B1 - Maniac Hop',
+            :duration => '5:35',
+            :url => 'http://www.juno.co.uk/MP3/SF571665-01-02-01.mp3'
+          },
+          {
+            :name => 'B2 - Fire Marshall',
+            :duration => '5:35',
+            :url => 'http://www.juno.co.uk/MP3/SF571665-01-03-01.mp3'
+          }
+        ]
       },
       {
         :title => 'Horseplay',
@@ -182,8 +199,6 @@ artists.each do |artist|
     imageable_id: artistObj.id,
     imageable_type: artistObj.class.name
   )
-  puts artist[:name]
-  puts artist[:img]
   unless artist[:releases].nil?
     artist[:releases].each do |release|
       itemObj = Item.create(
@@ -196,13 +211,23 @@ artists.each do |artist|
         category: release[:category],
         release_date: release[:release_date]
       )
-      puts release[:title]
-      puts release[:img]
       Image.create(
         url: release[:img],
         imageable_id: itemObj.id,
         imageable_type: itemObj.class.name
       )
+      unless release[:tracks].nil?
+        release[:tracks].each do |track|
+          trackObj = Track.create(
+            item: itemObj,
+            name: track[:name],
+            duration: track[:duration],
+            track_url: track[:url]
+          )
+          puts track[:name]
+          puts trackObj
+        end
+      end
     end
   end
   
