@@ -37,7 +37,7 @@ artists = [
           {
             :name => 'B2 - Fire Marshall',
             :duration => '5:35',
-            :url => 'http://www.juno.co.uk/MP3/SF571665-01-03-01.mp3'
+            :url => 'http://www.juno.co.uk/MP3/SF571665-01-02-02.mp3'
           }
         ]
       },
