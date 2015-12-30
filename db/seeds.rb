@@ -50,6 +50,28 @@ artists = [
         :category => 'Back in Stock',
         :release_date => '2014-11-01 14:32:53',
         :img => 'http://cdn.discogs.com/BQIOjmy3W33X2bsKhlhiM2wwyww=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(96)/discogs-images/R-5721764-1427117941-2319.jpeg.jpg',
+        :tracks => [
+          {
+            :name => 'A1 - Couch Mover',
+            :duration => '5:35',
+            :url => 'http://www.juno.co.uk/MP3/SF530367-01-01-01.mp3'
+          },
+          {
+            :name => 'A2 - Horseplay',
+            :duration => '5:35',
+            :url => 'http://www.juno.co.uk/MP3/SF530367-01-01-02.mp3'
+          },
+          {
+            :name => 'B1 - Short Round',
+            :duration => '5:35',
+            :url => 'http://www.juno.co.uk/MP3/SF530367-01-02-01.mp3'
+          },
+          {
+            :name => 'B2 - Temple II',
+            :duration => '5:35',
+            :url => 'http://www.juno.co.uk/MP3/SF530367-01-02-02.mp3'
+          },
+        ]
       }
     ]
   },
