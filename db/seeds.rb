@@ -88,6 +88,28 @@ artists = [
         :category => 'Back in Stock',
         :release_date => '2015-05-02 14:32:53',
         :img => 'http://cdn.discogs.com/N2R2uQ1ex8QLU36A5rHNw1xIiP8=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb()/discogs-images/R-3627411-1337952701-9254.jpeg.jpg',
+        :tracks => [
+          {
+            :name => 'A1 - Here We Stand',
+            :duration => '5:35',
+            :url => 'http://de.juno.co.uk/MP3/SF452307-01-01-01.mp3'
+          },
+          {
+            :name => 'A2 - Riding With Your Plastic Spokes',
+            :duration => '5:35',
+            :url => 'http://de.juno.co.uk/MP3/SF452307-01-01-02.mp3'
+          },
+          {
+            :name => 'B1 - Antarctica',
+            :duration => '5:35',
+            :url => 'http://de.juno.co.uk/MP3/SF452307-01-02-01.mp3'
+          },
+          {
+            :name => 'B2 - First Chair',
+            :duration => '5:35',
+            :url => 'http://de.juno.co.uk/MP3/SF452307-01-02-02.mp3'
+          }
+        ]
       }
     ]
   },
@@ -104,6 +126,13 @@ artists = [
         :category => 'Back in Stock',
         :release_date => '2015-05-02 14:32:53',
         :img => 'http://cdn.discogs.com/mTxctvlcS715BZ5gQKwtWHYucSU=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(96)/discogs-images/R-6348310-1418903986-7249.jpeg.jpg',
+        :tracks => [
+          {
+            :name => 'B2 - Dont Dream It Be It',
+            :duration => '5:35',
+            :url => 'http://de.juno.co.uk/MP3/SF551257-01-02-02.mp3'
+          }
+        ]
       }
     ]
   },
@@ -243,6 +272,7 @@ artists.each do |artist|
           trackObj = Track.create(
             item: itemObj,
             name: track[:name],
+            artist: artist[:name],
             duration: track[:duration],
             track_url: track[:url]
           )
